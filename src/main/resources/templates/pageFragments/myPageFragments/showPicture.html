@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+</head>
+
+<body>
+	
+	<div th:fragment="show">
+		<div class="text-left" th:if="${!namesFiles.isEmpty()}">
+			<span>Ostatnio dodane zdjecia</span>
+			<div class="row" >
+				<div class="col-md-2" th:each="nameFile: ${namesFiles}">
+					<img class="img-upload" th:src="'/images' + ${nameFile}">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

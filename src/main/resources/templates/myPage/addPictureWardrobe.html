@@ -1,0 +1,43 @@
+<!doctype html>
+<html  xmlns:th="http://www.thymeleaf.org">
+  <head th:replace= "pageFragments/myPageFragments/myPageHead :: head">
+	
+	</head>
+	
+	<body> 
+  
+		<header th:replace= "pageFragments/myPageFragments/myPageHeader :: header">
+		</header>
+	
+	<main>
+		<div class="container-fluid">
+			<h3 class="text-center">Dodaj zdjecie do gallerii Szafy</h3>
+			
+			<div th:replace= "pageFragments/myPageFragments/showPicture :: show">
+			
+			</div>
+			
+			<div class="form">
+					<form action="/upload/uploadWardrobe" th:action="@{/upload/uploadWardrobe}" method="post" enctype="multipart/form-data">
+						<input class="btn" type="file" name="files" multiple>
+						<input class="btn" type="submit" value="Dodaj zdjecia"> 
+					
+					</form>
+			</div>
+			
+			<h3> Zdjecia w galerii Szafy</h3>
+			
+			<div class="row">
+				<div class="col-sm-2 gallery-item" th:each="wardrobe: ${wardrobes}">
+					<section>
+						<div>
+							<img class="img-responsive gallery-image" th:src="'/images/wardrobes/' + ${wardrobe.name}">
+						</div>
+					</section>
+				</div>				
+			</div>					
+		</div>
+	</main>
+
+  </body>
+</html>

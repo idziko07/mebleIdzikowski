@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+</head>
+<body>
+	<header th:fragment="header">
+			<div class="container-fluid">
+				<div class="row">
+					<img class="logo mx-auto d-block" src="/img/logo2.png">
+				</div>
+				<div class="row">
+					<div class="container-fluid">
+						<nav class="navbar navbar-light navbar-expand-lg ">
+							
+								<button class="navbar-toggler mx-auto " type="button" data-toggle="collapse" data-target="#menu">
+								<span class="navbar-toggler-icon"></span>
+								</button>
+								
+								<div class="collapse navbar-collapse mx-auto" id="menu">
+									 <ul class="navbar-nav mx-auto text-center">
+										<li class="nav-item mx-3">
+											<a class="nav-link" href="/">Strona głowna</a>
+										</li>
+										<li class="nav-item mx-3 dropdown">
+											<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">dodaj zdjecia</a>
+											<div class="dropdown-menu">
+										      <a class="dropdown-item" href="/myPage/kitchen">Kuchnie</a>
+										      <a class="dropdown-item" href="/myPage/wardrobe">Szafy</a>
+										      <a class="dropdown-item" href="/myPage/room">Pokojowe</a>
+										    </div>
+										</li>
+										<li class="nav-item mx-3 dropdown">
+											<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">usuń zdjecia</a>
+											<div class="dropdown-menu">
+										      <a class="dropdown-item" href="/myPage/kitchen/delete">Kuchnie</a>
+										      <a class="dropdown-item" href="/myPage/wardrobe/delete">Szafy</a>
+										      <a class="dropdown-item" href="/myPage/room/delete">Pokojowe</a>
+										    </div>
+										</li>										
+										<li class="nav-item mx-3">
+											<a class="nav-link" href="/myPage/carousel">carusela</a>
+										</li>
+										<li class=" mx-3">
+											<form action="logMeOut" th:action="@{/logMeOut}" method="post" >
+	               								 <input class="btn" type="submit" value="Wyloguj"/>
+	           							 	</form>
+										</li>
+									 </ul>
+								</div>
+		
+						</nav>
+					</div>
+				</div>
+			</div>	
+	</header>
+</body>
+</html>

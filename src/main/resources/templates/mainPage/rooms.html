@@ -1,0 +1,49 @@
+<!doctype html>
+<html  xmlns:th="http://www.thymeleaf.org">
+	
+	<head th:replace= "pageFragments/mainPage/mainHead :: head">
+	</head>
+	
+	<body data-spy="scroll" data-target="#menu" data-offset="90"> 
+		
+		<!-- Navigation -->
+		<header th:replace="pageFragments/mainPage/mainHeader :: header"></header>
+		
+		
+		<!-- Start Info Section-->
+		
+				
+				<!-- GALLERY IMEGES SECTION -->	
+		<div class="container-fluid">
+			<main>
+				<article id="gallery">
+					<header>
+							<h4 class="header text-center"> Szafy Pokojowe</h4>
+					</header>	
+				
+					<div class="row">
+					
+						<div class="col-md-2 gallery-item" th:each="room:${rooms}">
+							<section>
+								<a class="lightBox" th:href="'/images/rooms/'+${room.name}">
+									<img class="img-responsive gallery-image" th:src="'/images/rooms/'+${room.name}">
+								</a>
+							</section>
+						</div>					
+					</div>
+				</article>
+			</main>		
+		</div>
+		
+		
+		<!-- FOOTER SECTION -->
+		
+		<footer th:replace= "pageFragments/mainPage/mainFooter :: footer">
+		</footer>
+		
+		<script>
+			baguetteBox.run('#gallery',{animation:'fadeIn'})
+		</script>	
+
+	</body>
+</html>

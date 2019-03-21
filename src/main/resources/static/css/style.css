@@ -1,0 +1,209 @@
+/* CSS Document section index */
+body{
+	position:relative;
+	background-repeat:repeat;
+	background-image: url("/img/pool_table.png");
+	/*background-color:#126e26;*/
+	width: 100%;
+}
+
+h4{
+	color:#fff;
+	text-align:center;
+}
+
+hr{
+	background-color:white;
+	
+}
+
+p{
+	color:#c6c6a9;
+	margin-top:0.5rem;
+}
+
+/* SECTION HEADER  */
+.navbar{
+	margin-bottom:0;
+}
+.row{
+	margin-left: 0;
+	margin-right: 0;
+}
+
+ol{
+	text-decoration:none;
+}
+
+.bg-navbar{
+	background-image: url("/img/pool_table.png");
+	opacity:0.8;
+	border-bottom:0.2px solid white;
+}
+.navbar-dark .navbar-nav .nav-link.active{
+	color:#fff;
+	font-weight:bold;
+}
+.nav-link{
+	color:#c6c6a9;	
+}
+.nav-link:hover{
+	background-color:#4b815c;
+	color:white;
+	font-weight:500;
+	border-radius: 5px;
+}
+.header{
+	margin-top:1.5rem;
+	margin-bottom:1rem;
+	font-size:3rem;
+}
+#carousel .carousel-inner .carousel-item img{
+	height:570px;
+}
+
+/* SECTION INFO */
+#info{
+	padding-top:3rem;
+	margin-bottom:1.5rem;
+}
+
+.container .row .d-md-block img{
+	opacity:1;
+}
+
+/* SECTION OFFER */
+#offer{
+	padding-top:3rem;
+	padding-bottom:1.5rem;
+	background-image:url(/img/wood3.jpeg);
+	background-size:cover;
+	
+}
+.list{
+	list-style-type:square;
+	list-style-position:inside;
+	padding-top:1.5rem;
+	padding-bottom:1.5rem;
+}
+.list li{
+	color:#c6c6a9;
+	font-size:1.5rem;
+}
+.btn{
+	margin-top:1.5rem;
+	padding:0.5rem 2rem;
+	
+}
+.btn-outline-primary{
+	color:#c6c6a9;
+	border-color:#c6c6a9;
+}
+.link:hover .btn-outline-primary{
+	color:black;
+	background:#b8b894;
+	border-color:#b8b894;
+}
+.btn-outline-primary:hover{
+	color:black;
+	background:#b8b894;
+	border-color:#b8b894;
+}
+.btn-outline-primary:focus{
+	color:black;
+	background:#b8b894;
+	border-color:#b8b894;
+	box-shadow: 0 0 0 0.2rem white;
+}
+.btn-outline-primary:active{
+	color:black;
+	background:#b8b894;
+	border-color:#b8b894;
+}
+.img-link{
+	width:220px;
+	height:auto;
+	text-align: center;
+}
+
+.icon{
+	margin-top:1rem;
+	color:#c6c6a9;
+	text-decoration:none;
+	font-weight: bold;
+}
+.icon:hover{
+	text-decoration:none;
+	color:#9c9ca4;
+
+}
+#contact{
+	padding-top:2rem;
+}
+#realizations{
+	padding-top:60px
+}
+.icon-contact{
+	margin:0.75rem;
+	float:left;
+}
+.help{
+	height:100px;
+}
+
+/* SECTION FOOTER  */
+.producer-image{
+	max-width:200px;
+	max-height:110px;
+	display:block;
+	margin:auto;
+}
+#producer{
+	margin-top:3rem;
+}
+#producer .carousel .carousel-inner .carousel-item {
+	min-height:110px;
+}
+
+/* CSS Document Page kitchen image*/
+
+.gallery-item{
+	overflow: hidden;
+	padding-top:1rem;
+	
+}
+.gallery-image{
+	max-width:200px;
+	max-height:200px;
+	display:block;
+	margin:auto;
+}
+
+#baguetteBox-overlay .full-image img{
+	max-height:94%;
+}
+
+@media only screen and (max-width: 768px){
+	#producer .carousel .carousel-inner {
+		height:212px;
+	}
+	#carousel .carousel-inner .carousel-item img{
+		height:400px;
+	}
+		
+}
+
+@media only screen and (max-width: 425px){
+	.header{
+		font-size:2.5rem;
+	}
+	#carousel .carousel-inner .carousel-item img{
+	height:360px;
+	}	
+}
+
+@media only screen and (max-width: 375px ){
+	.navbar-toggler{
+	 margin-right:0!important;
+	}
+}

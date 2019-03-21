@@ -1,0 +1,33 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head th:replace= "pageFragments/myPageFragments/myPageHead :: head">
+	</head>
+  <body> 
+  
+	<header th:replace= "pageFragments/myPageFragments/myPageHeader :: header">
+	</header>
+	
+		<div class="container-fluid">
+			<main>
+				<article id="gallery">
+					<header>
+							<h4 class="header text-center"> Pokojowe</h4>
+					</header>	
+				
+					<div class="row">
+						<div class="col-sm-2 gallery-item" th:each="room: ${rooms}">
+							<section>
+								<div>
+									<a th:href="'/myPage/room/deleteImg?id= '+${room.id}">
+										<img class="close" src="/img/Delete-32.png">
+										<img class="img-responsive gallery-image" th:src="'/images/rooms/' + ${room.name}">
+									</a>
+								</div>
+							</section>
+						</div>				
+					</div>
+				</article>
+			</main>		
+		</div>
+</body>
+</html>

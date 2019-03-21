@@ -1,0 +1,38 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="pageFragments/myPageFragments/myPageHead :: head">
+
+</head>
+
+<body>
+
+	<header
+		th:replace="pageFragments/myPageFragments/myPageHeader :: header">
+	</header>
+
+	<main>
+	<div class="container-fluid">
+		<h3 class="text-center">Zmien zdjecia na stronie głównej</h3>
+
+		<div class="row">
+			<div class="col-md-6">
+				<img class="img-fluid" th:src="@{/images/carousel/carousel1.jpg}" alt="first image carousel">
+
+				<form class="form" action="/upload/updateCarouselFist" th:action="@{/upload/updateCarouselFist}" method="post" enctype="multipart/form-data">
+					<input class="btn" type="file" name="carousel1">
+					<input class="btn" type="submit"value="zmien">
+				</form>
+			</div>
+			<div class="col-md-6">
+				<img class="img-fluid" th:src="@{/images/carousel/carousel2.jpg}" alt="second image carousel">
+
+				<form class="form" action="/upload/updateCarouselSeconed" th:action="@{/upload/updateCarouselSeconed}" method="post"	enctype="multipart/form-data">
+					<input class="btn" type="file" name="carousel2">
+					 <input class="btn" type="submit" value="zmien">
+				</form>
+			</div>
+		</div>
+	</div>
+	</main>
+</body>
+</html>
