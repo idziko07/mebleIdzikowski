@@ -22,7 +22,7 @@
 					</header>	
 				
 					<div class="row">
-						<div class="col-sm-2 gallery-item" th:each="kitchen: ${kitchens}">
+						<div class="col-md-1 gallery-item" th:each="kitchen: ${kitchens}">
 							<section>
 								<a class="lightBox" th:href="'/images/kitchen/' + ${kitchen.name}">
 									<img class="img-responsive gallery-image" th:src="'/images/kitchen/' + ${kitchen.name}">

@@ -1,9 +1,9 @@
 /* CSS Document section index */
 body{
-	position:relative;
-	background-repeat:repeat;
-	background-image: url("/img/pool_table.png");
-	/*background-color:#126e26;*/
+	position:relative; 
+	background-image: url("/img/tło.jpg");
+	background-attachment: fixed;
+    background-size: cover;
 	width: 100%;
 }
 
@@ -36,7 +36,7 @@ ol{
 }
 
 .bg-navbar{
-	background-image: url("/img/pool_table.png");
+	background-image: url("/img/tło-navbar.jpg");
 	opacity:0.8;
 	border-bottom:0.2px solid white;
 }
@@ -76,7 +76,7 @@ ol{
 #offer{
 	padding-top:3rem;
 	padding-bottom:1.5rem;
-	background-image:url(/img/wood3.jpeg);
+	/* background-image:url(/img/wood3.jpeg); */
 	background-size:cover;
 	
 }
@@ -126,6 +126,11 @@ ol{
 	text-align: center;
 }
 
+.img-fluid{
+	border:1px solid #b8b894; 
+	border-radius:10px;
+}
+
 .icon{
 	margin-top:1rem;
 	color:#c6c6a9;
@@ -169,14 +174,12 @@ ol{
 
 .gallery-item{
 	overflow: hidden;
-	padding-top:1rem;
-	
+	margin:5px;		
 }
 .gallery-image{
-	max-width:200px;
-	max-height:200px;
+	width:120px;
+	height:120px;
 	display:block;
-	margin:auto;
 }
 
 #baguetteBox-overlay .full-image img{
@@ -184,6 +187,9 @@ ol{
 }
 
 @media only screen and (max-width: 768px){
+	 body{
+		background-size: 100% 100vh;
+	} 
 	#producer .carousel .carousel-inner {
 		height:212px;
 	}
